@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marwadi University — Rajkot, Gujarat</title>
+  <style>
+    :root{
+      --brand:#0b5;           /* accent */
+      --ink:#1f2937;          /* dark */
+      --muted:#6b7280;        /* gray */
+      --surface:#ffffff;      /* card bg */
+      --bg:#f3f4f6;           /* page bg */
+      --shadow: 0 10px 25px rgba(0,0,0,.07);
+      --radius: 20px;
+      --maxw: 1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Header / Hero */
+    header{
+      position: sticky; top:0; z-index:50;
+      background:#fffccf99;
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid #e5e7eb;
+    }
+    .nav{max-width:var(--maxw);margin:auto;display:flex;gap:14px;align-items:center;justify-content:space-between;padding:10px 16px}
+    .logo{font-weight:800;letter-spacing:.2px}
+    .nav a{font-weight:600;color:#111827;opacity:.9}
+    .nav a:hover{opacity:1}
+
+    .hero{
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.35)),
+        url("https://upload.wikimedia.org/wikipedia/commons/a/a8/Marwadi_University..jpg") center/cover no-repeat fixed;
+      color:#fff; padding:90px 16px 80px;
+    }
+    .hero-inner{max-width:var(--maxw);margin:auto}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 10px;font-weight:900}
+    .hero p{margin:0 0 20px;opacity:.95}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .chip{background:#ffffffcc;color:#111;padding:6px 12px;border-radius:999px;font-weight:600}
+
+    /* Sections */
+    section{max-width:var(--maxw);margin:40px auto;padding:0 16px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{
+      background:var(--surface); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow);
+      border:1px solid #eef0f3;
+    }
+    .card h3{margin-top:0}
+    ul.clean{margin:0;padding-left:18px}
+    .pill{display:inline-block;margin:4px 6px 0 0;padding:6px 10px;border-radius:999px;background:#eefbf3;color:#065f46;font-weight:600}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    figure{margin:0;position:relative;overflow:hidden;border-radius:16px;border:1px solid #e5e7eb;background:#fff;box-shadow:var(--shadow)}
+    figure img{aspect-ratio: 4/3; object-fit:cover; width:100%}
+    figure figcaption{
+      position:absolute;left:8px;bottom:8px;font-weight:700;
+      padding:6px 10px;border-radius:999px;background:#00000099;color:#fff
+    }
+
+    /* Recruiters (CSS-only marquee with seamless loop) */
+    .recruiters-wrap{
+      background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+      border:1px solid #eef0f3; overflow:hidden;
+    }
+    .recruiters{
+      display:flex;align-items:center;gap:28px;
+      width:max-content; padding:18px 0; animation:scroll 22s linear infinite;
+    }
+    .recruiters:hover{animation-play-state:paused}
+    .recruiter{
+      display:flex;flex-direction:column;align-items:center;gap:6px;
+      min-width:125px; padding:10px 16px;
+    }
+    .recruiter img{height:38px; width:auto; filter:drop-shadow(0 2px 3px rgba(0,0,0,.12))}
+    .recruiter span{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+    @keyframes scroll{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)} /* we’ll duplicate track content to make it seamless */
+    }
+
+    /* Footer */
+    footer{margin-top:50px;background:#111827;color:#e5e7eb}
+    .foot{max-width:var(--maxw);margin:auto;padding:26px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+    .foot small{color:#9ca3af}
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <div class="logo">Marwadi University</div>
+      <div class="links">
+        <a href="#vision">Vision</a> •
+        <a href="#mission">Mission</a> •
+        <a href="#pso">PSOs</a> •
+        <a href="#courses">Courses</a> •
+        <a href="#gallery">Gallery</a> •
+        <a href="#recruiters">Top Recruiters</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero" role="img" aria-label="Marwadi University campus">
+    <div class="hero-inner">
+      <h1>Marwadi University, Rajkot — Gujarat</h1>
+      <p>NAAC A+ accredited multidisciplinary university on the Rajkot–Morbi highway, empowering learners with industry-ready skills and strong research culture.</p>
+      <div class="chips">
+        <span class="chip">Vision & Mission</span>
+        <span class="chip">Program Specific Outcomes</span>
+        <span class="chip">Courses Offered</span>
+        <span class="chip">Image Gallery</span>
+        <span class="chip">Top Recruiters</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vision & Mission -->
+  <section id="vision">
+    <div class="cards">
+      <article class="card">
+        <h3>Vision</h3>
+        <p>To be a leading university that fosters innovation, research, and holistic development, producing socially responsible professionals and entrepreneurs.</p>
+      </article>
+      <article id="mission" class="card">
+        <h3>Mission</h3>
+        <ul class="clean">
+          <li>Deliver outcome-based education aligned with global standards.</li>
+          <li>Promote interdisciplinary research, incubation and start-up culture.</li>
+          <li>Collaborate with industry for experiential learning and placements.</li>
+          <li>Build an inclusive, student-centric campus ecosystem.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- PSOs -->
+  <section id="pso">
+    <h2>Program Specific Outcomes (CSE)</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>PSO-1: Software Design & Development</h3>
+        <p>Apply core CS fundamentals to analyze, design, implement and test robust software systems using modern tools, frameworks, and best practices.</p>
+      </article>
+      <article class="card">
+        <h3>PSO-2: Data & Intelligence</h3>
+        <p>Model, process and interpret data to build intelligent solutions leveraging databases, machine learning, and cloud-native pipelines.</p>
+      </article>
+      <article class="card">
+        <h3>PSO-3: Professional Practice</h3>
+        <p>Demonstrate teamwork, ethics, effective communication, and continuous learning to deliver technology solutions with societal impact.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses">
+    <h2>Courses Offered</h2>
+    <div class="cards">
+      <article class="card"><h3>UG</h3>
+        <span class="pill">B.Tech (CSE)</span>
+        <span class="pill">B.Tech (IT)</span>
+        <span class="pill">B.Tech (CE)</span>
+        <span class="pill">BCA</span>
+        <span class="pill">BBA</span>
+        <span class="pill">B.Com</span>
+      </article>
+      <article class="card"><h3>PG</h3>
+        <span class="pill">M.Tech (CSE)</span>
+        <span class="pill">MBA</span>
+        <span class="pill">MCA</span>
+        <span class="pill">M.Sc (Data Science)</span>
+      </article>
+      <article class="card"><h3>Doctoral</h3>
+        <span class="pill">Ph.D. (Engineering)</span>
+        <span class="pill">Ph.D. (Management)</span>
+        <span class="pill">Ph.D. (Computer Science)</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Image Gallery — Campus & City</h2>
+    <div class="gallery">
+      <figure>
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Marwadi_University..jpg" alt="Marwadi University main building">
+        <figcaption>MU Main Building</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Marwadi_University.jpg" alt="Marwadi University PG building">
+        <figcaption>MU PG Block</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Rajkot_from_a_kite.jpg" alt="Aerial view of Rajkot city">
+        <figcaption>Rajkot — Aerial</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Beautiful_sky_of_Rajkot_city.jpg" alt="Skyline and sunset in Rajkot">
+        <figcaption>Rajkot — Skyline</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Top Recruiters -->
+  <section id="recruiters">
+    <h2>Top Recruiters</h2>
+    <div class="recruiters-wrap">
+      <!-- Duplicate the track content two times for perfect seamless scroll -->
+      <div class="recruiters">
+        <!-- Set 1 -->
+        <div class="recruiter"><img alt="Google"    src="https://cdn.simpleicons.org/google"><span>Google</span></div>
+        <div class="recruiter"><img alt="Amazon"    src="https://cdn.simpleicons.org/amazon"><span>Amazon</span></div>
+        <div class="recruiter"><img alt="Microsoft" src="https://cdn.simpleicons.org/microsoft"><span>Microsoft</span></div>
+        <div class="recruiter"><img alt="IBM"       src="https://cdn.simpleicons.org/ibm"><span>IBM</span></div>
+        <div class="recruiter"><img alt="TCS"       src="https://cdn.simpleicons.org/tataconsultancyservices"><span>TCS</span></div>
+        <div class="recruiter"><img alt="Infosys"   src="https://cdn.simpleicons.org/infosys"><span>Infosys</span></div>
+        <div class="recruiter"><img alt="Wipro"     src="https://cdn.simpleicons.org/wipro"><span>Wipro</span></div>
+        <div class="recruiter"><img alt="Deloitte"  src="https://cdn.simpleicons.org/deloitte"><span>Deloitte</span></div>
+        <div class="recruiter"><img alt="Accenture" src="https://cdn.simpleicons.org/accenture"><span>Accenture</span></div>
+        <div class="recruiter"><img alt="Capgemini" src="https://cdn.simpleicons.org/capgemini"><span>Capgemini</span></div>
+
+        <!-- Set 2 (duplicate for seamless loop) -->
+        <div class="recruiter"><img alt="Google"    src="https://cdn.simpleicons.org/google"><span>Google</span></div>
+        <div class="recruiter"><img alt="Amazon"    src="https://cdn.simpleicons.org/amazon"><span>Amazon</span></div>
+        <div class="recruiter"><img alt="Microsoft" src="https://cdn.simpleicons.org/microsoft"><span>Microsoft</span></div>
+        <div class="recruiter"><img alt="IBM"       src="https://cdn.simpleicons.org/ibm"><span>IBM</span></div>
+        <div class="recruiter"><img alt="TCS"       src="https://cdn.simpleicons.org/tataconsultancyservices"><span>TCS</span></div>
+        <div class="recruiter"><img alt="Infosys"   src="https://cdn.simpleicons.org/infosys"><span>Infosys</span></div>
+        <div class="recruiter"><img alt="Wipro"     src="https://cdn.simpleicons.org/wipro"><span>Wipro</span></div>
+        <div class="recruiter"><img alt="Deloitte"  src="https://cdn.simpleicons.org/deloitte"><span>Deloitte</span></div>
+        <div class="recruiter"><img alt="Accenture" src="https://cdn.simpleicons.org/accenture"><span>Accenture</span></div>
+        <div class="recruiter"><img alt="Capgemini" src="https://cdn.simpleicons.org/capgemini"><span>Capgemini</span></div>
+      </div>
+    </div>
+    <p style="color:var(--muted);margin-top:8px;font-size:13px">Logos are for placement illustration only.</p>
+  </section>
+
+  <footer>
+    <div class="foot">
+      <div><strong>Marwadi University</strong>, Rajkot, Gujarat • <a href="https://www.marwadiuniversity.ac.in/" target="_blank" rel="noreferrer">Official Site</a></div>
+      <small>&copy; 2025 — Sample static page (HTML &amp; CSS only)</small>
+    </div>
+  </footer>
+</body>
+</html>
